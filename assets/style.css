@@ -1,6 +1,7 @@
 * {
   font-family: 'Slabo 27px', serif;
   box-sizing: border-box;
+  color: #383B40;
 }
 
 body {
@@ -9,6 +10,8 @@ body {
   padding: 0;
   width: 100vw;
   height: 100vh;
+  padding: 1rem;
+  border: 5px solid #6CABF7;
 }
 
 .avatar {
@@ -18,6 +21,11 @@ body {
 
 .social {
   display: flex;
+  margin-top: 1rem;
+}
+
+a {
+  font-weight: bold;
 }
 
 a.profile {
@@ -25,10 +33,13 @@ a.profile {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  color: #0b0b0b;
 }
 
-a.profile:hover {
+a:visited {
+  color: #6CABF7;
+}
+
+a:hover, a:active {
   color: red;
 }
 
