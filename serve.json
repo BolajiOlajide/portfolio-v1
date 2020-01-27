@@ -1,0 +1,9 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/blog", "destination": "https://blog.bolaji.de", "type": 301 },
+    { "source": "/vlog", "destination": "https://blog.bolaji.de", "type": 301 }
+  ],
+  "directoryListing": false,
+  "trailingSlash": false
+}

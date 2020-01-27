@@ -4,5 +4,12 @@
   "main": "index.js",
   "repository": "git@github.com:BolajiOlajide/portfolio.git",
   "author": "Bolaji",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^11.3.0"
+  },
+  "scripts": {
+    "start": "serve",
+    "build": "echo \"No need to build this already static website.\""
+  }
 }
