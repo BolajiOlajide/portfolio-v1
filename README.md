@@ -6,4 +6,4 @@ Here lives my simple portfolio page.
 
 `Created with just HTML & CSS.`
 
-[Design Inspiration](http://collectui.com/designers/fuviz/portfolio)
+[V2 Design Inspiration](http://collectui.com/designers/fuviz/portfolio)
