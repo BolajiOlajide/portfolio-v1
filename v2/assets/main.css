@@ -321,8 +321,47 @@ main {
   background: var(--modalHeaderColor);
 }
 
+.links {
+  display: none;
+}
+
 @media only screen and (min-width: 600px) {
+  body {
+    padding: 50px;
+  }
   .hamburger {
     display: none;
+  }
+  main {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .avatar-container {
+    width: 40%;
+  }
+  .avatar-overlay {
+    width: 100%;
+    background: var(--overlay-color);
+    height: 100%;
+  }
+  .avatar {
+    width: 100px;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+  .links .link {
+    color: var(--secondary);
+    padding: 0;
+    line-height: 1;
+    text-align: right;
+    font-size: 2rem;
+    padding: 5px;
+  }
+  .links .link:hover {
+    border: 1px dashed var(--secondary);
   }
 }
