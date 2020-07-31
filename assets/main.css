@@ -230,6 +230,10 @@ main {
   padding: 0;
 }
 
+#darkModeToggle {
+  display: none;
+}
+
 .sub-name {
   color: var(--sub-name);
   text-align: end;
