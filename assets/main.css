@@ -73,6 +73,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 10px;
+  margin-bottom: 10px;
 }
 
 main {
@@ -121,6 +122,10 @@ main {
   font-size: 2em;
   padding: 10px 20px;
   text-decoration: none;
+}
+
+.logo {
+  cursor: pointer;
 }
 
 /* menu */
