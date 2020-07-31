@@ -346,7 +346,7 @@ main {
     height: 100%;
   }
   .avatar {
-    width: 100px;
+    width: 100%;
   }
   .links {
     display: flex;
