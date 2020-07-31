@@ -19,8 +19,7 @@
     <meta property="og:title" content="Bolaji Olajide" />
     <meta property="og:description"
         content="Hey! I'm Proton - a software engineer with a knack for solving real-life problems with sometimes technical solutions and other times generic solutions." />
-    <meta property="og:image"
-        content="assets/avatar-card.png" />
+    <meta property="og:image" content="assets/avatar-card.png" />
 
     <!-- twitter card tags additive with the og: tags  -->
     <meta name="twitter:card" content="summary_large_image">
@@ -28,8 +27,7 @@
     <meta name="twitter:title" value="Bolaji Olajide" />
     <meta name="twitter:description"
         value="Hey! I'm Proton - a software engineer with a knack for solving real-life problems with sometimes technical solutions and other times generic solutions." />
-    <meta name="twitter:image"
-        content="assets/avatar-card.png" />
+    <meta name="twitter:image" content="assets/avatar-card.png" />
     <meta name="twitter:url" value="https://bolaji.de/" />
     <meta name="twitter:label1" value="Have an idea?" />
     <meta name="twitter:data1" value="let's talk" />
@@ -89,7 +87,9 @@
 
         <section class="hamburger">
             <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <label class="menu-icon" for="menu-btn">
+                <span class="navicon"></span>
+            </label>
         </section>
     </header>
     <main>
@@ -103,6 +103,23 @@
         </section>
     </main>
 
+    <section class="modal-window" id="modal">
+        <section class="modal-content">
+            <a href="https://bolaji.de/uses" class="link" target="_blank" rel="noopener noreferrer nofollow">
+                Uses
+            </a>
+            <a href="https://github.com/BolajiOlajide" class="link" target="_blank"
+                rel="noopener noreferrer nofollow">Github</a>
+            <a href="https://twitter.com/Bolaji___" class="link" target="_blank"
+                rel="noopener noreferrer nofollow">Twitter</a>
+            <a href="https://blog.bolaji.de" class="link" target="_blank" rel="noopener noreferrer nofollow">Blog</a>
+            <a href="https://medium.com/@cooProton" class="link" target="_blank"
+                rel="noopener noreferrer nofollow">Youtube</a>
+            <a href="https://www.linkedin.com/in/bolaji-olajide-95b08777/" class="link" target="_blank"
+                rel="noopener noreferrer nofollow">LinkedIn</a>
+        </section>
+    </section>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48710501-7"></script>
     <script>
@@ -111,6 +128,24 @@
         gtag("js", new Date());
 
         gtag("config", "UA-48710501-7");
+    </script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM fully loaded and parsed');
+            const menuBtn = document.getElementById('menu-btn');
+            const hamburger = document.querySelector('.hamburger');
+            const modalWindow = document.querySelector('.modal-window');
+
+            const toggleOverlay = () => {
+                if (menuBtn.checked) {
+                    return modalWindow.classList.toggle("show");
+                }
+                modalWindow.classList.toggle("show");
+            }
+
+            // event listeners
+            menuBtn.addEventListener('click', toggleOverlay);
+        });
     </script>
 </body>
 
