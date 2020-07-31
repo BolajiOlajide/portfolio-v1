@@ -104,6 +104,8 @@
     </main>
 
     <section class="modal-window" id="modal">
+        <section class="modal-header">
+        </section>
         <section class="modal-content">
             <a href="https://bolaji.de/uses" class="link" target="_blank" rel="noopener noreferrer nofollow">
                 Uses
@@ -133,14 +135,14 @@
         window.addEventListener('DOMContentLoaded', () => {
             console.log('DOM fully loaded and parsed');
             const menuBtn = document.getElementById('menu-btn');
-            const hamburger = document.querySelector('.hamburger');
             const modalWindow = document.querySelector('.modal-window');
+            const root = document.documentElement;
 
             const toggleOverlay = () => {
                 if (menuBtn.checked) {
-                    return modalWindow.classList.toggle("show");
+                    return modalWindow.classList.toggle('show');
                 }
-                modalWindow.classList.toggle("show");
+                modalWindow.classList.toggle('show');
             }
 
             // event listeners

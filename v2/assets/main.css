@@ -10,6 +10,9 @@
   --moon-display: inline-block;
   --sub-name: #868686;
   --overlay-color: #FCCC98;
+  --lightLine: aliceblue;
+  --navIconColor: #333;
+  --modalHeaderColor: aliceblue;
 }
 
 [data-theme="dark"] {
@@ -19,6 +22,9 @@
   --moon-display: none;
   --sub-name: #868686;
   --overlay-color: #FFF;
+  --lightLine: aliceblue;
+  --navIconColor: #eee;
+  --modalHeaderColor: transparent;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,6 +35,9 @@
     --moon-display: none;
     --sub-name: #868686;
     --overlay-color: #FFF;
+    --lightLine: aliceblue;
+    --navIconColor: #eee;
+    --modalHeaderColor: transparent;
   }
 }
 
@@ -40,6 +49,9 @@
     --moon-display: inline-block;
     --sub-name: #868686;
     --overlay-color: #FCCC98;
+    --lightLine: aliceblue;
+    --navIconColor: #333;
+    --modalHeaderColor: aliceblue;
   }
 }
 
@@ -128,7 +140,7 @@ main {
 }
 
 .header .menu-icon .navicon {
-  background: var(--secondary);
+  background: var(--navIconColor);
   display: block;
   height: 2px;
   position: relative;
@@ -137,7 +149,7 @@ main {
 }
 
 .header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
-  background: var(--secondary);
+  background: var(--navIconColor);
   content: '';
   display: block;
   height: 100%;
@@ -246,10 +258,21 @@ main {
 }
 
 .link {
-  color: var(--secondary);
+  color: var(--lightLine);
   font-size: 1.5rem;
   line-height: 2;
   cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  border: 1px dashed aliceblue;
+}
+
+.link:hover {
+  border: 1px dotted var(--primary);
+}
+
+.lightLine {
+  background: var(--lightLine);
 }
 
 .avatar {
@@ -291,6 +314,11 @@ main {
 
 .hamburger {
   z-index: 3;
+}
+
+.modal-header {
+  height: 70px;
+  background: var(--modalHeaderColor);
 }
 
 @media only screen and (min-width: 600px) {
