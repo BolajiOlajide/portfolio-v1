@@ -232,6 +232,57 @@
       </li>
     </ul>
   </section>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48710501-7"></script>
+
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag("js", new Date());
+
+      gtag("config", "UA-48710501-7");
+
+      window.addEventListener('DOMContentLoaded', () => {
+          const menuBtn = document.getElementById('menu-btn');
+          const modalWindow = document.querySelector('.modal-window');
+          const darkModeToggle = document.getElementById('darkModeToggle');
+
+
+          const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+          if (currentTheme) {
+              document.documentElement.setAttribute('data-theme', currentTheme);
+
+              if (currentTheme === 'dark') {
+                  toggleSwitch.checked = true;
+              }
+          }
+
+
+
+          const toggleOverlay = () => {
+              if (menuBtn.checked) {
+                  return modalWindow.classList.toggle('show');
+              }
+              modalWindow.classList.toggle('show');
+          }
+
+          const switchTheme = (e) => {
+              if (e.target.checked) {
+                  document.documentElement.setAttribute('data-theme', 'dark');
+                  localStorage.setItem('proton-theme', 'dark');
+              }
+              else {
+                  document.documentElement.setAttribute('data-theme', 'light');
+                  localStorage.setItem('proton-theme', 'light');
+              }
+          }
+
+          // event listeners
+          menuBtn.addEventListener('click', toggleOverlay);
+          darkModeToggle.addEventListener('change', switchTheme, false);
+      });
+  </script>
 </body>
 
 </html>
