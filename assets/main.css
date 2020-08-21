@@ -9,22 +9,34 @@
   --sun-display: none;
   --moon-display: inline-block;
   --sub-name: #868686;
-  --overlay-color: #FCCC98;
+  --overlay-color: #fccc98;
   --lightLine: aliceblue;
   --navIconColor: #333;
   --modalHeaderColor: aliceblue;
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --primary: #333;
   --secondary: #eee;
   --sun-display: inline-block;
   --moon-display: none;
   --sub-name: #868686;
-  --overlay-color: #FFF;
+  --overlay-color: #fff;
   --lightLine: aliceblue;
   --navIconColor: #eee;
   --modalHeaderColor: transparent;
+}
+
+[data-theme='light'] {
+  --primary: #eee;
+  --secondary: #333;
+  --sun-display: none;
+  --moon-display: inline-block;
+  --sub-name: #868686;
+  --overlay-color: #fccc98;
+  --lightLine: aliceblue;
+  --navIconColor: #333;
+  --modalHeaderColor: aliceblue;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,24 +46,10 @@
     --sun-display: inline-block;
     --moon-display: none;
     --sub-name: #868686;
-    --overlay-color: #FFF;
+    --overlay-color: #fff;
     --lightLine: aliceblue;
     --navIconColor: #eee;
     --modalHeaderColor: transparent;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --primary: #eee;
-    --secondary: #333;
-    --sun-display: none;
-    --moon-display: inline-block;
-    --sub-name: #868686;
-    --overlay-color: #FCCC98;
-    --lightLine: aliceblue;
-    --navIconColor: #333;
-    --modalHeaderColor: aliceblue;
   }
 }
 
@@ -73,7 +71,6 @@ body {
   height: 100vh;
   margin: 0;
   padding: 10px;
-  margin-bottom: 10px;
 }
 
 main {
@@ -112,7 +109,8 @@ main {
   text-decoration: none;
 }
 
-.header li a:hover, .header .menu-btn:hover {
+.header li a:hover,
+.header .menu-btn:hover {
   background-color: #f4f4f4;
 }
 
@@ -133,7 +131,7 @@ main {
 .header .menu {
   clear: both;
   max-height: 0;
-  transition: max-height .2s ease-out;
+  transition: max-height 0.2s ease-out;
 }
 
 .header .menu-icon {
@@ -149,17 +147,18 @@ main {
   display: block;
   height: 2px;
   position: relative;
-  transition: background .2s ease-out;
+  transition: background 0.2s ease-out;
   width: 18px;
 }
 
-.header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
   background: var(--navIconColor);
   content: '';
   display: block;
   height: 100%;
   position: absolute;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   width: 100%;
 }
 
@@ -177,23 +176,24 @@ main {
   display: none;
 }
 
-.header .menu-btn:checked~.menu {
+.header .menu-btn:checked ~ .menu {
   max-height: 240px;
 }
 
-.header .menu-btn:checked~.menu-icon .navicon {
+.header .menu-btn:checked ~ .menu-icon .navicon {
   background: transparent;
 }
 
-.header .menu-btn:checked~.menu-icon .navicon:before {
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
   transform: rotate(-45deg);
 }
 
-.header .menu-btn:checked~.menu-icon .navicon:after {
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
   transform: rotate(45deg);
 }
 
-.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before, .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
 
@@ -230,7 +230,8 @@ main {
   stroke: var(--secondary);
 }
 
-.name, .sub-name {
+.name,
+.sub-name {
   margin: 0;
   padding: 0;
 }
