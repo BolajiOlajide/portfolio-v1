@@ -154,18 +154,19 @@
             const modalWindow = document.querySelector('.modal-window');
             const darkModeToggle = document.getElementById('darkModeToggle');
 
+            if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
+                document.documentElement.setAttribute('data-theme', "dark");
+            }
 
-            const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+            const currentTheme = localStorage.getItem('proton-theme') ? localStorage.getItem('proton-theme') : null;
 
             if (currentTheme) {
                 document.documentElement.setAttribute('data-theme', currentTheme);
 
                 if (currentTheme === 'dark') {
-                    toggleSwitch.checked = true;
+                    darkModeToggle.checked = true;
                 }
             }
-
-
 
             const toggleOverlay = () => {
                 if (menuBtn.checked) {
@@ -175,9 +176,11 @@
             }
 
             const switchTheme = (e) => {
+
                 if (e.target.checked) {
                     document.documentElement.setAttribute('data-theme', 'dark');
                     localStorage.setItem('proton-theme', 'dark');
+
                 }
                 else {
                     document.documentElement.setAttribute('data-theme', 'light');
