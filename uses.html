@@ -23,14 +23,14 @@
 
   <!-- twitter card tags additive with the og: tags  -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:domain" value="https://bolaji.de/" />
-  <meta name="twitter:title" value="Bolaji Olajide" />
+  <meta name="twitter:domain" content="https://bolaji.de/" />
+  <meta name="twitter:title" content="Bolaji Olajide" />
   <meta name="twitter:description"
-    value="Hey! I'm Proton - a software engineer with a knack for solving real-life problems with sometimes technical solutions and other times generic solutions." />
+    content="Hey! I'm Proton - a software engineer with a knack for solving real-life problems with sometimes technical solutions and other times generic solutions." />
   <meta name="twitter:image" content="https://www.bolaji.de/assets/avatar-card.png" />
-  <meta name="twitter:url" value="https://bolaji.de/" />
-  <meta name="twitter:label1" value="Have an idea?" />
-  <meta name="twitter:data1" value="let's talk" />
+  <meta name="twitter:url" content="https://bolaji.de/" />
+  <meta name="twitter:label1" content="Have an idea?" />
+  <meta name="twitter:data1" content="let's talk" />
   <link href="assets/main.css" rel="stylesheet">
 
   <!-- favicon imports -->
@@ -224,54 +224,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48710501-7"></script>
 
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag("js", new Date());
-
-    gtag("config", "UA-48710501-7");
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const menuBtn = document.getElementById('menu-btn');
-      const modalWindow = document.querySelector('.modal-window');
-      const darkModeToggle = document.getElementById('darkModeToggle');
-
-
-      const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-
-      if (currentTheme) {
-        document.documentElement.setAttribute('data-theme', currentTheme);
-
-        if (currentTheme === 'dark') {
-          toggleSwitch.checked = true;
-        }
-      }
-
-
-
-      const toggleOverlay = () => {
-        if (menuBtn.checked) {
-          return modalWindow.classList.toggle('show');
-        }
-        modalWindow.classList.toggle('show');
-      }
-
-      const switchTheme = (e) => {
-        if (e.target.checked) {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          localStorage.setItem('proton-theme', 'dark');
-        }
-        else {
-          document.documentElement.setAttribute('data-theme', 'light');
-          localStorage.setItem('proton-theme', 'light');
-        }
-      }
-
-      // event listeners
-      menuBtn.addEventListener('click', toggleOverlay);
-      darkModeToggle.addEventListener('change', switchTheme, false);
-    });
-  </script>
+  <script src="assets/main.js"></script>
 </body>
 
 </html>
